@@ -1,0 +1,251 @@
+@import '~antd/dist/antd.css';
+body{
+    background-color: #e0e0e0;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: #047BD5;
+    justify-content: center;
+}
+.flip-logo{
+    display: flex;
+    flex-direction: column;
+    width:80px;
+    margin-top: 0.8em;
+}
+i{
+    display: flex;
+    flex-direction: row;
+}
+.flip-logo span{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    color: white;
+    width:100px
+}
+.flip-logo span img{
+    width:10px;
+    height: 10px;
+}
+#search-bar{
+    width: 400px;
+}
+.ant-input-search-button{
+    border:none;
+    margin: 0;
+    padding: 0;
+}
+.ant-input-search-button span svg{
+    fill: #047BD5;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    cursor: pointer;
+}
+#become-seller{
+    margin: 0 0.5em;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+#drop-down{
+    margin: 0 0.5em;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+#cart-logo
+{
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.categories{
+    background: white;
+    padding:0.1em 0;
+    border: 0.5px solid rgba(128, 128, 128, 0.712);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) ;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0 8em;
+    margin-top: 0.5em;
+}
+ 
+li{
+    font-size: 16px;
+}
+.category-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.container{
+    margin-top: 2em;
+    margin-right: 1em;
+}
+/* .side-bar-container{
+    position: relative;
+} */
+.side-bar{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1em;
+    width:16vw;
+    box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) ;
+    margin: 2em;
+}
+.filter-categories{
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+}
+.sub-categories{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+}
+.fk-assured{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.check-filter{
+    display: flex;
+    flex-direction: column;
+}
+.filter-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filter-options
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+.filter-option
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* ITEM */
+.items-page{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.items-container{
+    
+    margin-right: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: white; */
+    
+}
+.item-card{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width:275px;
+    height: 480px;
+    margin:0.03em;
+    transition: 0.2s ease-in;
+}
+.item-details{
+    padding:0.8em;
+    margin-top: 0.5em;
+}
+.item-desc p{
+    height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+.item-img img{
+    width: 100%;
+}
+.item-rating{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+.item-stars{
+    display: block;
+    padding: 0 0.5em;
+    font-size: 12px;
+    color: white;
+    background-color: green;
+    border-radius: 12%;
+}
+.item-reviews{
+    font-size: 14px;
+    color: #a0a0a0;
+    margin:0 0.5em ;
+    
+}
+.assured-img img{
+    width: 80px;
+    margin:0 0.3em;
+}
+.item-card:hover{
+    box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) ; ;
+}
+.item-pricing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8 em;
+    margin-top: 0.3em;
+}
+.item-pricing span:nth-child(1){
+    font-size: 16px;
+    font-weight: bold;
+}
+.item-pricing span:nth-child(2){
+    color: #a0a0a0;
+    text-decoration: line-through;
+}
+.item-pricing span:nth-child(3){
+    color: green;
+    font-size: 12px;
+}
+.item-pricing span{
+    margin: 0.5em 0.2em;
+}
+/* SORT BAR */
+.sort-bar{
+    background: white;
+    padding: 1em;
+    padding-bottom:0 ;
+    width: 1100px;
+}
+.bread-crumb{
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.sort-by-tab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.results{
+    margin: 0.3em 0;
+    font-size: 16px;
+}
+
