@@ -8,7 +8,7 @@ import { Pagination } from 'antd';
 const Items = () => {
   const [products,setProducts] = useState([])
   const [brands, setbrands] = useState([])
-  const [filteredList,setFilteredList] = useState([]);
+  
   const getAllProducts = async () =>{
       const response = await Axios.get('http://localhost:3001/getProducts');
       setProducts(response.data);
@@ -62,17 +62,7 @@ const Items = () => {
       console.log(products);
     }
   }
-  const filterList = (brands) =>{
-    const temp = [];
-    if(brands !== null ){
-        for (let index = 0; index < products.length; index++) {
-          if(brands.has(products[index].brand))
-            temp.push(products[index]);
-        }
-      setFilteredList([...temp])
-    }
-
-  }
+  
   return (
     <div className='items-page'>
       <div className='side-bar-container'>
