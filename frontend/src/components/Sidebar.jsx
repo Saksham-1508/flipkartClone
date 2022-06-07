@@ -1,12 +1,8 @@
 import React from 'react'
 import { DownOutlined, StarOutlined } from '@ant-design/icons';
-import { Menu, Space } from 'antd';
 
+const Sidebar = ({brands}) => {
 
-const Sidebar = () => {
-    const onClick = (e) => {
-        console.log('click ', e);
-    }
     return (
         <div className="side-bar">
             
@@ -49,10 +45,15 @@ const Sidebar = () => {
                     <DownOutlined/>
                 </div>
                 <div className="filter-options">
-                    <span className='filter-option'>
-                        <input type="checkbox" id="Asus" name="Asus"/>
-                        <label style={{marginLeft:'3px'}} htmlFor="Asus">Asus</label>
-                    </span>
+                    {brands.map((brand)=>{
+                        return(
+                            <span className='filter-option'>
+                                <input type="checkbox" id={brand} name={brand}/>
+                                <label style={{marginLeft:'3px'}} htmlFor={brand}>{brand}</label>
+                            </span>
+                        );
+                    })}
+                    
                 </div>
             </div>
 
@@ -67,19 +68,19 @@ const Sidebar = () => {
                 </div>
                 <div className="filter-options">
                     <span className='filter-option'>
-                        <input type="checkbox" id="STAR-4" name="STAR-4"/>
-                        <label style={{marginLeft:'3px'}} htmlFor="STAR-4">4 <StarOutlined /> and above</label>
+                        <input type="radio" id="STAR-4" name="STAR"/>
+                        <label style={{marginLeft:'3px'}} value="4" htmlFor="STAR-4">4 <StarOutlined /> and above</label>
                     </span>
                     <span className='filter-option'>
-                        <input type="checkbox" id="STAR-3" name="STAR-3"/>
-                        <label style={{marginLeft:'3px'}} htmlFor="STAR-3">3 <StarOutlined /> and above</label>
+                        <input type="radio" id="STAR-3" name="STAR"/>
+                        <label style={{marginLeft:'3px'}} value="3" htmlFor="STAR-3">3 <StarOutlined /> and above</label>
                     </span>
                     <span className='filter-option'>
-                        <input type="checkbox" id="STAR-2" name="STAR-2"/>
-                        <label style={{marginLeft:'3px'}} htmlFor="STAR-2">2 <StarOutlined /> and above</label>
+                        <input type="radio" id="STAR-2" name="STAR"/>
+                        <label style={{marginLeft:'3px'}} value="2" htmlFor="STAR-2">2 <StarOutlined /> and above</label>
                     </span>
                     <span className='filter-option'>
-                        <input type="checkbox" id="STAR-1" name="STAR-1"/>
+                        <input type="radio" id="STAR-1" value="1" name="STAR"/>
                         <label style={{marginLeft:'3px'}} htmlFor="STAR-1">1 <StarOutlined /> and above</label>
                     </span>
                     

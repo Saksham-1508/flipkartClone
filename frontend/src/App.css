@@ -164,7 +164,7 @@ li{
     background: white;
     width:275px;
     height: 480px;
-    margin:0.03em;
+    /* margin:0.03em; */
     transition: 0.2s ease-in;
 }
 .item-details{
@@ -179,6 +179,7 @@ li{
 }
 .item-img img{
     width: 100%;
+    height: 300px;
 }
 .item-rating{
     display: flex;
@@ -204,6 +205,7 @@ li{
     margin:0 0.3em;
 }
 .item-card:hover{
+    z-index: 2;
     box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) ; ;
 }
 .item-pricing{

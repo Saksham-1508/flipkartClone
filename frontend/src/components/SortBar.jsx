@@ -1,7 +1,7 @@
 import React from 'react'
 import { Breadcrumb, Menu } from 'antd';
 
-export const SortBar = () => {
+export const SortBar = ({sortProducts, getAllProducts}) => {
     return (
         <div className='sort-bar'>
             <Breadcrumb separator=">" >
@@ -12,20 +12,20 @@ export const SortBar = () => {
             <div className="sort-by-tab">
                 <p style={{width:'60px',marginBottom:0}}><strong>Sort By</strong></p>
                 <Menu mode="horizontal" defaultSelectedKeys={['relevance']} style={{width:'100%',justifyContent:'left'}}>
-                    <Menu.Item style={{margin:0}} key="relevance">
+                    <Menu.Item onClick={getAllProducts} style={{margin:0}} key="relevance">
                         Relevance
                     </Menu.Item>
-                    <Menu.Item style={{margin:0}} key="popularity">
+                    <Menu.Item onClick={()=>{sortProducts("popularity")}} style={{margin:0}} key="popularity">
                         Popularity
                     </Menu.Item>
-                    <Menu.Item style={{margin:0}} key="htl">
+                    <Menu.Item onClick={()=>{sortProducts("dec")}} style={{margin:0}} key="htl">
                         Price -- High to Low
                     </Menu.Item>
-                    <Menu.Item style={{margin:0}} key="lth">
+                    <Menu.Item onClick={()=>{sortProducts("inc")}} style={{margin:0}} key="lth">
                         Price -- Low to High
                     </Menu.Item>
-                    <Menu.Item style={{margin:0}} key="newest">
-                        Newest First
+                    <Menu.Item onClick={()=>{sortProducts("discount")}} style={{margin:0}} key="newest">
+                        Discount
                     </Menu.Item>
                 </Menu>
             </div>
